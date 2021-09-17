@@ -1,0 +1,173 @@
+﻿@model IEnumerable<HeiAmigo.Models.Estab>
+
+@{
+    ViewData["Title"] = "Estabelecimentos";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RazaoSocial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeFantasia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cnpj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tel1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tel2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.End_CEP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.End_Rua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.End_Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.End_Complemento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.End_Bairro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CD_UF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cd_Municipio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bloqueado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuCadastro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataCadastro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuAlteracao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataAlteracao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToqueCampainha1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToqueCampainha2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToqueCampainha3)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RazaoSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeFantasia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cnpj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tel1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tel2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.End_CEP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.End_Rua)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.End_Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.End_Complemento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.End_Bairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CD_UF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cd_Municipio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bloqueado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuCadastro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuAlteracao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataAlteracao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToqueCampainha1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToqueCampainha2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToqueCampainha3)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
